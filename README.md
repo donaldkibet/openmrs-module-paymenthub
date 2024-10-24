@@ -1,30 +1,37 @@
-${moduleName}
+openmrs-payment-hub
 ==========================
 
 Description
 -----------
-This is a very basic module which can be used as a starting point in creating a new module.
+This module is a payment hub for OpenMRS, designed to integrate external payment systems such as Stripe and PayPal. It provides a seamless way to manage payments within the OpenMRS ecosystem.
 
-Building from Source
+Setup Instructions
 --------------------
-You will need to have Java 1.6+ and Maven 2.x+ installed.  Use the command 'mvn package' to 
-compile and package the module.  The .omod file will be in the omod/target folder.
+To set up the OpenMRS Payment Hub repository, follow these steps:
 
-Alternatively you can add the snippet provided in the [Creating Modules](https://wiki.openmrs.org/x/cAEr) page to your 
-omod/pom.xml and use the mvn command:
+1. **Prerequisites**: Ensure you have the following installed:
+   - Java 1.6 or higher
+   - Maven 2.x or higher
 
-    mvn package -P deploy-web -D deploy.path="../../openmrs-1.8.x/webapp/src/main/webapp"
+2. **Clone the Repository**: Use the following command to clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/openmrs-payment-hub.git
+   cd openmrs-payment-hub
+   ```
 
-It will allow you to deploy any changes to your web 
-resources such as jsp or js files without re-installing the module. The deploy path says 
-where OpenMRS is deployed.
+3. **Build the Module**: Run the following command to compile and package the module:
+   ```bash
+   mvn package
+   ```
+   The resulting `.omod` file will be located in the `omod/target` folder.
 
-Installation
-------------
-1. Build the module to produce the .omod file.
-2. Use the OpenMRS Administration > Manage Modules screen to upload and install the .omod file.
+4. **Deploy the Module**: You can deploy the module using one of the following methods:
+   - **Via OpenMRS Administration**: Navigate to the OpenMRS Administration > Manage Modules screen to upload and install the `.omod` file.
+   - **Manual Installation**: If uploads are not allowed from the web (this can be changed via a runtime property), drop the `.omod` file into the `~/.OpenMRS/modules` folder. After placing the file there, restart OpenMRS/tomcat to load and start the module.
 
-If uploads are not allowed from the web (changable via a runtime property), you can drop the omod
-into the ~/.OpenMRS/modules folder.  (Where ~/.OpenMRS is assumed to be the Application 
-Data Directory that the running openmrs is currently using.)  After putting the file in there 
-simply restart OpenMRS/tomcat and the module will be loaded and started.
+5. **Development**: If you want to deploy changes to your web resources (like JSP or JS files) without reinstalling the module, add the snippet provided in the [Creating Modules](https://wiki.openmrs.org/x/cAEr) page to your `omod/pom.xml` and use the following command:
+   ```bash
+   mvn package -P deploy-web -D deploy.path="../../openmrs-1.8.x/webapp/src/main/webapp"
+   ```
+
+This will allow you to make changes and see them reflected immediately without the need for a full module reinstall.

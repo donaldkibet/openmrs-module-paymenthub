@@ -3,5 +3,6 @@
   "java.format.settings.profile": "GoogleStyle",
   "editor.formatOnSave": true,
   "java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml",
-  "java.configuration.updateBuildConfiguration": "interactive"
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "java.compile.nullAnalysis.mode": "automatic"
 }
