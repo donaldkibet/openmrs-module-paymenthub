@@ -34,22 +34,6 @@
             <artifactId>openmrs-web</artifactId>
             <scope>provided</scope>
         </dependency>
-
-        <!-- Add Legacy UI Module dependency -->
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>legacyui-omod</artifactId>
-            <version>1.8.0</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Add uiframework Module dependency -->
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>uiframework-api</artifactId>
-            <version>3.19.0</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
 
     <build>

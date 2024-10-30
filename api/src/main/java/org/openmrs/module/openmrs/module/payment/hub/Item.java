@@ -9,33 +9,14 @@
  */
 package org.openmrs.module.openmrs.module.payment.hub;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import org.openmrs.BaseOpenmrsData;
 import org.openmrs.User;
 
 /** Please note that a corresponding table schema must be created in liquibase.xml. */
-// Uncomment 2 lines below if you want to make the Item class persistable, see also
-// PaymentHubDaoTest and liquibase.xml
-// @Entity(name = "openmrs.module.payment.hub.Item")
-// @Table(name = "openmrs.module.payment.hub_item")
 public class Item extends BaseOpenmrsData {
 
-  @Id
-  @GeneratedValue
-  @Column(name = "openmrs.module.payment.hub_item_id")
   private Integer id;
-
-  @ManyToOne
-  @JoinColumn(name = "owner")
   private User owner;
-
-  @Basic
-  @Column(name = "description", length = 255)
   private String description;
 
   @Override

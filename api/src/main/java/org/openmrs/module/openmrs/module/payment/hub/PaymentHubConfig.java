@@ -9,10 +9,7 @@
  */
 package org.openmrs.module.openmrs.module.payment.hub;
 
-import org.springframework.stereotype.Component;
-
 /** Contains module's config. */
-@Component("openmrs.module.payment.hub.PaymentHubConfig")
 public class PaymentHubConfig {
 
   public static final String MODULE_PRIVILEGE = "Payment Hub Privilege";
