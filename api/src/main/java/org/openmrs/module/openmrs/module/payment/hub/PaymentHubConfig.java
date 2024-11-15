@@ -11,6 +11,6 @@ package org.openmrs.module.openmrs.module.payment.hub;
 
 /** Contains module's config. */
 public class PaymentHubConfig {
-
-  public static final String MODULE_PRIVILEGE = "Payment Hub Privilege";
+	
+	public static final String MODULE_PRIVILEGE = "Payment Hub Privilege";
 }
