@@ -4,10 +4,11 @@
  * OpenMRS is also distributed under the terms of the Healthcare Disclaimer located at
  * http://openmrs.org/license.
  *
- * <p>Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS graphic logo is a
+ * <p>
+ * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS graphic logo is a
  * trademark of OpenMRS Inc.
  */
-package org.openmrs.module.openmrs.module.payment.hub.api.dao;
+package org.openmrs.module.openmrs.module.payment.hub.dao;
 
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
@@ -17,6 +18,7 @@ import org.junit.Test;
 import org.openmrs.api.UserService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.openmrs.module.payment.hub.Item;
+import org.openmrs.module.openmrs.module.payment.hub.api.dao.PaymentHubDao;
 import org.openmrs.test.BaseModuleContextSensitiveTest;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -28,13 +30,14 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class PaymentHubDaoTest extends BaseModuleContextSensitiveTest {
 
-  @Autowired PaymentHubDao dao;
+  @Autowired
+  PaymentHubDao dao;
 
-  @Autowired UserService userService;
+  @Autowired
+  UserService userService;
 
   @Test
-  @Ignore(
-      "Unignore if you want to make the Item class persistable, see also Item and liquibase.xml")
+  @Ignore("Unignore if you want to make the Item class persistable, see also Item and liquibase.xml")
   public void saveItem_shouldSaveAllPropertiesInDb() {
     // Given
     Item item = new Item();

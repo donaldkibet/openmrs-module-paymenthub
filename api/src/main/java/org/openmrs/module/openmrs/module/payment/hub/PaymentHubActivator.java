@@ -17,16 +17,16 @@ import org.openmrs.module.BaseModuleActivator;
  * This class contains the logic that is run every time this module is either started or shutdown
  */
 public class PaymentHubActivator extends BaseModuleActivator {
-
-  private Log log = LogFactory.getLog(this.getClass());
-
-  /** @see #started() */
-  public void started() {
-    log.info("Started Payment Hub");
-  }
-
-  /** @see #shutdown() */
-  public void shutdown() {
-    log.info("Shutdown Payment Hub");
-  }
+	
+	private Log log = LogFactory.getLog(this.getClass());
+	
+	/** @see #started() */
+	public void started() {
+		log.info("Started Payment Hub");
+	}
+	
+	/** @see #shutdown() */
+	public void shutdown() {
+		log.info("Shutdown Payment Hub");
+	}
 }

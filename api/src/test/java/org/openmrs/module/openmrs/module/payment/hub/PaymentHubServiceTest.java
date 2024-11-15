@@ -4,10 +4,11 @@
  * OpenMRS is also distributed under the terms of the Healthcare Disclaimer located at
  * http://openmrs.org/license.
  *
- * <p>Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS graphic logo is a
+ * <p>
+ * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS graphic logo is a
  * trademark of OpenMRS Inc.
  */
-package org.openmrs.module.openmrs.module.payment.hub.api;
+package org.openmrs.module.openmrs.module.payment.hub;
 
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
@@ -30,11 +31,14 @@ import org.openmrs.module.openmrs.module.payment.hub.api.impl.PaymentHubServiceI
  */
 public class PaymentHubServiceTest {
 
-  @InjectMocks PaymentHubServiceImpl basicModuleService;
+  @InjectMocks
+  PaymentHubServiceImpl basicModuleService;
 
-  @Mock PaymentHubDao dao;
+  @Mock
+  PaymentHubDao dao;
 
-  @Mock UserService userService;
+  @Mock
+  UserService userService;
 
   @Before
   public void setupMocks() {
