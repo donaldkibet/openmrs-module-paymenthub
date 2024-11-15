@@ -7,7 +7,7 @@
 	<name>${project.parent.name}</name>
 	<version>${project.parent.version}</version>
 	<package>org.openmrs.module.openmrs.module.payment.hub</package>
-	<author>dkibet</author>
+	<author>Donald Kibet</author>
 	<description>
 		${project.parent.description}
 	</description>
